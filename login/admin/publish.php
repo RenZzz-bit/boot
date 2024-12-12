@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Insert article into the database
-    $stmt = $conn->prepare("INSERT INTO articles (title, content, image) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO news (title, content, image) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $title, $content, $image);
     
     if ($stmt->execute()) {

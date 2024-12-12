@@ -2,7 +2,7 @@
 include('db.php');
 
 // Fetch all articles
-$sql = "SELECT * FROM articles ORDER BY created_at DESC";
+$sql = "SELECT * FROM news ORDER BY created_at DESC";
 $result = $conn->query($sql);
 ?>
 
