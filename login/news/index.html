@@ -1,73 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publish News</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1 style="text-align: center;">Publish News</h1>
-    <div>
-        <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-bottom: 20px;">
-            <button type="button" onclick="format('bold')"><b>B</b></button>
-            <button type="button" onclick="format('italic')"><i>I</i></button>
-            <button type="button" onclick="format('underline')"><u>U</u></button>
-            <button type="button" onclick="format('strikethrough')"><s>S</s></button>
-            <button type="button" onclick="format('justifyLeft')">⬅️</button>
-            <button type="button" onclick="format('justifyCenter')">🏳️</button>
-            <button type="button" onclick="format('justifyRight')">➡️</button>
-            <button type="button" onclick="format('justifyFull')">🔄</button>
-            <button type="button" onclick="insertLink()">🔗</button>
-            <button type="button" onclick="document.execCommand('cut')">✂️</button>
-            <button type="button" onclick="insertImage()">🖼️</button>
-            <button type="button" onclick="document.execCommand('undo')">↩️</button>
-            <button type="button" onclick="document.execCommand('redo')">↪️</button>
-
-            <input type="file" id="image" name="image" accept="image/*" style="margin-left: 20px;" required>
-            <button type="button" style="background-color: #000000; color: white; padding: 5px 10px; border: none; border-radius: 3px;" onclick="submitForm()">Publish</button>
+    <div class="banner">
+        <div class="logo">
+          <img src="../assets/images/ros.jpg" alt="">
         </div>
-
-        <form id="newsForm" action="publish_news.php" method="post" enctype="multipart/form-data">
-            <label for="title">Title</label>
-            <input type="text" id="title" name="title" required>
-
-            <label for="content"><br>Content:</label>
-            <div id="editor" contenteditable="true" style="border: 1px solid #ccc; padding: 10px; min-height: 150px;"></div>
-            <input type="hidden" id="content" name="content">
-        </form>
-    </div>
-
-    <script>
-        function format(command, value = null) {
-            document.execCommand(command, false, value);
-        }
-
-        function insertLink() {
-            const url = prompt("Enter the URL:");
-            if (url) {
-                document.execCommand('createLink', false, url);
-            }
-        }
-
-        function insertImage() {
-            const url = prompt("Enter the image URL:");
-            if (url) {
-                document.execCommand('insertImage', false, url);
-            }
-        }
-
-        function submitForm() {
-            const title = document.getElementById("title").value.trim();
-            const content = document.getElementById("editor").innerHTML.trim();
-
-            if (title === "" || content === "") {
-                alert("Please fill in both the title and content.");
-                return;
-            }
-
-            document.getElementById("content").value = content;
-            document.getElementById("newsForm").submit();
-        }
-    </script>
+        <h2>R.O.SALAS CONSTRUCTION</h2>
+        <p>Admin</p>
+      </div>
 </body>
+
 </html>
