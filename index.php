@@ -60,13 +60,14 @@
                         <a href="about.html" class="nav-item nav-link" style="color: #FF5733;">About</a>
                         <a href="hotline.html" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
                         <a href="index.php#news" class="nav-item nav-link" style="color: #FF5733;">News</a>
-                        <div class="nav-item dropdown">
+                        <a href="fb/login.php" class="nav-item nav-link" style="color: #FF5733;">Login</a>
+                        <!-- <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" style="color: #FF5733;">LogIn</a>
                             <div class="dropdown-menu bg-light mt-2">
                                 <a href="login/admin.html" class="dropdown-item" style="color: #FF5733;">Admin</a>
                                 <a href="fb/login.php" class="dropdown-item" style="color: #FF5733;">User</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
                         data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> -->
@@ -295,8 +296,8 @@
     <div class="container-fluid bg-light py-5" id="news">
         <div class="container py-5">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">What's New:</div>
-                <h1 class="mb-4">Latest News</h1>
+                <div class="btn btn-sm border rounded-pill text-dark px-3 mb-3">News:</div>
+                <h1 class="mb-4" style="color: #FF5733;" >Latest News</h1>
             </div>
             <div class="row g-4">
                 <div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
@@ -343,8 +344,8 @@
     <div class="container-fluid py-5">
         <div class="container py-5">
             <div class="mx-auto text-center wow fadeIn" data-wow-delay="0.1s" style="max-width: 500px;">
-                <div class="btn btn-sm border rounded-pill text-primary px-3 mb-3">Popular FAQs</div>
-                <h1 class="mb-4">Frequently Asked Questions</h1>
+                <div class="btn btn-sm border rounded-pill text-dark px-3 mb-3">Popular FAQs</div>
+                <h1 class="mb-4" style="color: #FF5733;">Frequently Asked Questions</h1>
             </div>
             <div class="row">
                 <div class="col-lg-6">

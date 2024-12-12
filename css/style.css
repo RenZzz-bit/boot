@@ -230,14 +230,14 @@ h6,
 }
 
 .service-item:hover {
-    background: var(--primary);
+    background:  #FF5733;
 }
 
 .service-item .service-icon {
     margin: 0 auto 20px auto;
     width: 90px;
     height: 90px;
-    color: var(--primary);
+    color:  #FF5733;
     background: var(--light);
     transition: .5s;
 }
@@ -491,7 +491,7 @@ h6,
     margin-bottom: 10px;
     padding: 0;
     text-align: left;
-    color: rgba(255,255,255,.5);
+    color: #FF5733;
     font-weight: normal;
     transition: .3s;
 }
