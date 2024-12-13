@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 		if(($user['username'] == $username) && 
 			($user['password'] == $Password)) {
-				header("location: adminhome.php");
+				header("location: news/index.html");
 		}
 		else {
 			echo "<script language='javascript'>";
