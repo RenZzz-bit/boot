@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Handle image upload
     $image = null;
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
-        $target_dir = "images/";
+        $target_dir = "assets/";
         $image_name = basename($_FILES["image"]["name"]);
         $target_file = $target_dir . $image_name;
         

@@ -1,0 +1,62 @@
+/* General container */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Article Detail Styling */
+.article-detail {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.article-title {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.article-date {
+    display: block;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.article-content {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Back Button Styling */
+.back-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-button a {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button a:hover {
+    background-color: #0056b3;
+}

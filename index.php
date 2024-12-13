@@ -58,6 +58,50 @@ include('login/admin/db.php');
     <link href="css/style.css" rel="stylesheet">
 </head>
 
+<style>
+    /* Set a fixed height for the image container */
+.case-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    height: 300px; /* You can adjust this value */
+    display: flex;
+    justify-content: center;
+}
+
+/* Make the image fill the container, while maintaining its aspect ratio */
+.case-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Optional: Set a fixed size for the text content area to ensure consistency */
+.case-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.pagination {
+    display: flex; /* Use flexbox for inline layout */
+    justify-content: center; /* Center the pagination buttons */
+}
+
+.pagination-btn {
+    margin-right: 10px; /* Add space between buttons */
+}
+
+.pagination-btn:last-child {
+    margin-right: 0; /* Remove margin from the last button */
+}
+
+
+</style>
+
 <body>
     <!-- Spinner Start -->
     <div id="spinner"
@@ -235,13 +279,13 @@ include('login/admin/db.php');
                     // Sanitize and display each article
                     $title = htmlspecialchars($row['title']);
                     $content = nl2br(htmlspecialchars($row['content']));
-                    $image = $row['image'] ? 'images/' . htmlspecialchars($row['image']) : 'img/default.jpg'; // Fallback image
-                    $articleLink = "article.php?id=" . $row['id']; // Link to individual article page (if applicable)
-
+                    $image = $row['image'] ? 'login/admin/assets/' . htmlspecialchars($row['image']) : 'assets/default.jpg'; // Fallback image
+                    $articleLink = "login/admin/article.php?id=" . $row['id']; // Link to individual article page (if applicable)
+            
                     echo '<div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">';
                     echo '<div class="case-item position-relative overflow-hidden rounded mb-2">';
                     echo '<img class="img-fluid" src="' . $image . '" alt="">';
-                    echo '<a class="case-overlay text-decoration-none" href="' . $articleLink . '">';
+                    echo '<a class="case-overlay text-decoration-none" href="' . $articleLink . '" target="_blank">';  // Add target="_blank" here
                     echo '<small>' . date('F j, Y', strtotime($row['created_at'])) . '</small>';
                     echo '<h5 class="lh-base text-white mb-3">' . $title . '</h5>';
                     echo '<span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>';
@@ -250,19 +294,20 @@ include('login/admin/db.php');
                     echo '</div>';
                 }
             } else {
-                echo '<p>No articles published yet.</p>';
+                echo '<h3 style="text-align: center;">No articles published yet.</h3>';
             }
+            
             ?>
         </div>
-        
-        <!-- Pagination Links -->
-        <div class="pagination text-center mt-4">
-            <?php
-            for ($page = 1; $page <= $totalPages; $page++) {
-                echo "<a href='?page=$page' class='btn btn-primary btn-sm'>$page</a>";
-            }
-            ?>
-        </div>
+         <!-- Pagination Links -->
+            <div class="pagination text-center mt-4">
+                <?php
+                for ($page = 1; $page <= $totalPages; $page++) {
+                    echo "<a href='?page=$page' class='btn btn-primary btn-sm pagination-btn'>$page</a>";
+                }
+                ?>
+            </div>
+
     </div>
 </div>
 <!-- News End -->
