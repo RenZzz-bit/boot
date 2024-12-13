@@ -6791,7 +6791,7 @@ textarea.form-control-lg {
 }
 
 .border-bottom {
-    border-bottom: 1px solid #dee2e6 !important
+    border-bottom: 1px solid #ff5733 !important
 }
 
 .border-bottom-0 {
@@ -7816,7 +7816,7 @@ textarea.form-control-lg {
 }
 
 .text-white {
-    color: #fff !important
+    color: #ff5733  !important
 }
 
 .text-body {
@@ -18825,7 +18825,7 @@ textarea.form-control-lg {
 }
 
 .border-bottom {
-    border-bottom: 1px solid #dee2e6 !important
+    border-bottom: 1px solid #ff5733 !important
 }
 
 .border-bottom-0 {
@@ -19328,6 +19328,7 @@ textarea.form-control-lg {
 
 .mb-4 {
     margin-bottom: 1.5rem !important
+    
 }
 
 .mb-5 {

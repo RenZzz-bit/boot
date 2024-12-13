@@ -212,15 +212,15 @@
                     <a href="index.php" class="d-inline-block mb-3">
                         <h1 class="text-white">lorem<span class="text-primary">.</span>ipsum</h1>
                     </a>
-                    <p class="mb-0">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                    <p class="mb-0" style="color: #FF5733;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
                         amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
                         clita duo justo et tempor</p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <h5 class="text-white mb-4">Get In Touch</h5>
-                    <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                    <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                <h5 class="text-white mb-4" style="color: #FF5733;">Get In Touch</h5>
+                    <p style="color: #808080;"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p style="color: #808080;"><i class="fa fa-phone-alt me-3" ></i>+012 345 67890</p>
+                    <p style="color: #808080    ;"><i class="fa fa-envelope me-3" ></i>info@example.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
@@ -250,18 +250,18 @@
         <div class="container wow fadeIn" data-wow-delay="0.1s">
             <div class="copyright">
                 <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" style="color: #FF5733;">
+                        &copy; <a class="border-bottom" href="#" style="color: #FF5733;">KAAGAPAY, All Right Reserved.</a>
 
-                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>
+                        <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***
+                        Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a class="border-bottom" href="https://themewagon.com">ThemeWagon</a>/-->
                     </div>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
-                            <a href="">Home</a>
-                            <a href="">Cookies</a>
-                            <a href="">Help</a>
-                            <a href="">FAQs</a>
+                            <a href="" style="color: #FF5733;">Home</a>
+                            <a href="" style="color: #FF5733;">Cookies</a>
+                            <a href="" style="color: #FF5733;">Help</a>
+                            <a href="" style="color: #FF5733;">FAQs</a>
                         </div>
                     </div>
                 </div>

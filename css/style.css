@@ -153,7 +153,7 @@ h6,
 }
 
 .hero-header .breadcrumb-item+.breadcrumb-item::before {
-    color: var(--light);
+    color: var(--primary);
 }
 
 
@@ -356,6 +356,7 @@ h6,
     background: #ff5733;
     border-radius: 25px;
     margin-bottom: 15px;
+    border: 1px solid #FFFFFF;
 }
 
 .case-overlay span.btn:hover {
@@ -478,7 +479,7 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgba(255,255,255,.5);
+    color: #FF5733;
     border: 1px solid rgba(256, 256, 256, .1);
     border-radius: 40px;
     transition: .3s;
@@ -493,13 +494,13 @@ h6,
     margin-bottom: 10px;
     padding: 0;
     text-align: left;
-    color: rgba(255,255,255,.5);
+    color: #808080;
     font-weight: normal;
     transition: .3s;
 }
 
 .footer .btn.btn-link:hover {
-    color: #FFFFFF;
+    color: #FF5733;;
 }
 
 .footer .btn.btn-link::before {
