@@ -226,7 +226,7 @@
 	}
 	#profile-field{
 		background: rgb(246,246,246);
-		background: linear-gradient(0deg, rgba(246,246,246,1) 0%, rgba(132,185,238,1) 62%, rgba(0,151,255,1) 100%);
+		background: white;
 	}
 	.gallery__img {
 	    width: 100%;

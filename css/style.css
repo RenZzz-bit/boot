@@ -93,7 +93,7 @@ h6,
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 0;
-    color: rgba(255, 255, 255, .7);
+    color: #FF5733;
     outline: none;
 }
 
@@ -230,14 +230,18 @@ h6,
 }
 
 .service-item:hover {
+<<<<<<< HEAD
     background: #F3E5AB;
+=======
+    background:  #FF5733;
+>>>>>>> 4ba35c5ba351cc80a6c4db7fe1e1395514c09372
 }
 
 .service-item .service-icon {
     margin: 0 auto 20px auto;
     width: 90px;
     height: 90px;
-    color: var(--primary);
+    color:  #FF5733;
     background: var(--light);
     transition: .5s;
 }
@@ -491,7 +495,7 @@ h6,
     margin-bottom: 10px;
     padding: 0;
     text-align: left;
-    color: rgba(255,255,255,.5);
+    color: #FF5733;
     font-weight: normal;
     transition: .3s;
 }
