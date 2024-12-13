@@ -51,14 +51,14 @@
                     <h1 class="text-black" style="color: #FF5733;"></span>KAAGAPAY</h1>
                 </a>
                 <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse" 
-                    data-bs-target="#navbarCollapse">
+                    data-bs-target="#navbarCollapse" style="color: #FF5733;">
                     <span class="navbar-toggler-icon" ></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="collapse navbar-collapse" id="navbarCollapse" >
                     <div class="navbar-nav ms-auto">
                     <a href="index.php" class="nav-item nav-link active" style="color: #FF5733;">Home</a>
-                        <a href="about.html" class="nav-item nav-link" style="color: #FF5733;">About</a>
-                        <a href="hotline.html" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
+                        <a href="about.php" class="nav-item nav-link" style="color: #FF5733;">About</a>
+                        <a href="hotline.php" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
                         <a href="index.php#news" class="nav-item nav-link" style="color: #FF5733;">News</a>
                         <a href="fb/login.php" class="nav-item nav-link" style="color: #FF5733;">Login</a>
                         <!-- <div class="nav-item dropdown">
@@ -336,7 +336,7 @@
             </div>
         </div>
     </div>
-    */
+
     <!-- News End -->
 
 

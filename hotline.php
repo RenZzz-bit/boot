@@ -57,8 +57,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.php" class="nav-item nav-link active">Home</a>
-                        <a href="about.html" class="nav-item nav-link">About</a>
-                        <a href="hotline.html" class="nav-item nav-link">Hotlines</a>
+                        <a href="about.php" class="nav-item nav-link">About</a>
+                        <a href="hotline.php" class="nav-item nav-link">Hotlines</a>
                         <a href="index.php#news" class="nav-item nav-link">News</a>
                         <a href="fb/login.php" class="nav-item nav-link" style="color: #FF5733;">Login</a>
                         <!-- <div class="nav-item dropdown">
@@ -70,10 +70,10 @@
                         </div> -->
                         
                         
-                    </div>
+                    <!-- </div> 
                     <butaton type="button" class="btn text-white p-0 d-none d-lg-block" data-bs-toggle="modal"
-                        data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton>
-                </div>
+                       data-bs-target="#searchModal"><i class="fa fa-search"></i></butaton> 
+                </div>-->
             </nav>
         </div>
     </div>

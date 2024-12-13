@@ -57,8 +57,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.php" class="nav-item nav-link active" style="color: #FF5733;">Home</a>
-                        <a href="about.html" class="nav-item nav-link" style="color: #FF5733;">About</a>
-                        <a href="hotline.html" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
+                        <a href="about.php" class="nav-item nav-link" style="color: #FF5733;">About</a>
+                        <a href="hotline.php" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
                         <a href="index.php#news" class="nav-item nav-link" style="color: #FF5733;">News</a>
                         <a href="fb/login.php" class="nav-item nav-link" style="color: #FF5733;">Login</a>
                         <!-- <div class="nav-item dropdown">
