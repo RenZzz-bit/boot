@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: ##FF5733;
+    --primary: #FF5733;
     --secondary: #15ACE1;
     --light: #F4F7FE;
     --dark: #14183E;
@@ -93,7 +93,7 @@ h6,
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 0;
-    color: #FF5733;
+    color: rgba(255, 255, 255, .7);
     outline: none;
 }
 
@@ -230,18 +230,14 @@ h6,
 }
 
 .service-item:hover {
-<<<<<<< HEAD
     background: #F3E5AB;
-=======
-    background:  #FF5733;
->>>>>>> 4ba35c5ba351cc80a6c4db7fe1e1395514c09372
 }
 
 .service-item .service-icon {
     margin: 0 auto 20px auto;
     width: 90px;
     height: 90px;
-    color:  #FF5733;
+    color: var(--primary);
     background: var(--light);
     transition: .5s;
 }
@@ -495,7 +491,7 @@ h6,
     margin-bottom: 10px;
     padding: 0;
     text-align: left;
-    color: #FF5733;
+    color: rgba(255,255,255,.5);
     font-weight: normal;
     transition: .3s;
 }
