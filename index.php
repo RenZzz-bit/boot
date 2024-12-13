@@ -178,7 +178,7 @@
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
-                                            <i class="fa fa-robot fa-2x"></i>
+                                            <i class="fa fa-robot fa-2x" style="color: #FF5733;"></i>
                                         </div>
                                         <h5 class="mb-3">Rorat ipsum justo</h5>
                                         <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
@@ -189,7 +189,7 @@
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
-                                            <i class="fa fa-power-off fa-2x"></i>
+                                            <i class="fa fa-power-off fa-2x" style="color: #FF5733;"></i>
                                         </div>
                                         <h5 class="mb-3">ipsum justo</h5>
                                         <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
@@ -204,7 +204,7 @@
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
-                                            <i class="fa fa-graduation-cap fa-2x"></i>
+                                            <i class="fa fa-graduation-cap fa-2x" style="color: #FF5733;"></i>
                                         </div>
                                         <h5 class="mb-3">elitr dolor</h5>
                                         <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
@@ -215,7 +215,7 @@
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
-                                            <i class="fa fa-brain fa-2x"></i>
+                                            <i class="fa fa-brain fa-2x" style="color: #FF5733;"></i>
                                         </div>
                                         <h5 class="mb-3">duo et elitr</h5>
                                         <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
@@ -306,7 +306,7 @@
                             <small>Lorem</small>
                             <h5 class="lh-base text-white mb-3">Lorem elitr magna stet eirmod labore amet labore clita
                             </h5>
-                            <span class="btn btn-square" style="backgcolor: #FF5733;"><i class="fa fa-arrow-right"></i></span>
+                            <span class="btn btn-square btn-primary"><i class="fa fa-arrow-right"></i></span>
                         </a>
                     </div>
                 </div>

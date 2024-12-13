@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #1363C6;
+    --primary: ##FF5733;
     --secondary: #15ACE1;
     --light: #F4F7FE;
     --dark: #14183E;
@@ -230,7 +230,7 @@ h6,
 }
 
 .service-item:hover {
-    background: var(--primary);
+    background: #F3E5AB;
 }
 
 .service-item .service-icon {
@@ -253,7 +253,7 @@ h6,
 
 .service-item:hover h5,
 .service-item:hover p {
-    color: #FFFFFF;
+    color: #FF5733;
 }
 
 .service-item a.btn {
@@ -376,7 +376,7 @@ h6,
 
 .accordion .accordion-button:not(.collapsed) {
     color: #FFFFFF;
-    background: var(--primary);
+    background: #FF5733;
     box-shadow: none;
 }
 
