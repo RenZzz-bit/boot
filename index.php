@@ -668,9 +668,9 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="text-white mb-4" style="color: #FF5733;">Get In Touch</h5>
-                    <p style="color: #FF5733;"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                    <p style="color: #FF5733;"><i class="fa fa-phone-alt me-3" ></i>+012 345 67890</p>
-                    <p style="color: #FF5733;"><i class="fa fa-envelope me-3" ></i>info@example.com</p>
+                    <p style="color: #808080;"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p style="color: #808080;"><i class="fa fa-phone-alt me-3" ></i>+012 345 67890</p>
+                    <p style="color: #808080    ;"><i class="fa fa-envelope me-3" ></i>info@example.com</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="" style="color: #FF5733;"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-outline-light btn-social" href="" style="color: #FF5733;"><i class="fab fa-facebook-f"></i></a>
@@ -681,19 +681,19 @@
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
                     <h5 class="text-white mb-4" style="color: #FF5733;">Popular Link</h5>
-                    <a class="btn btn-link" href="" style="color: #FF5733;">About Us</a>
-                    <a class="btn btn-link" href="" style="color: #FF5733;">Contact Us</a>
-                    <a class="btn btn-link" href="" style="color: #FF5733;">Privacy Policy</a>
-                    <a class="btn btn-link" href="" style="color: #FF5733;">Terms & Condition</a>
-                    <a class="btn btn-link" href="" style="color: #FF5733;">Career</a>
+                    <a class="btn btn-link" href="">About Us</a>
+                    <a class="btn btn-link" href="">Contact Us</a>
+                    <a class="btn btn-link" href="">Privacy Policy</a>
+                    <a class="btn btn-link" href="">Terms & Condition</a>
+                    <a class="btn btn-link" href="">Career</a>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="text-white mb-4" style="color: #FF5733;">Our Services</h5>
-                    <a class="btn btn-link" href="" style="color: #FF5733;">R diam i</a>
-                    <a class="btn btn-link" href="" style="color: #FF5733;">stet no </a>
-                    <a class="btn btn-link" href="" style="color: #FF5733;">o labore l</a>
-                    <a class="btn btn-link" href="" style="color: #FF5733;">lorem sit</a>
-                    <a class="btn btn-link" href="" style="color: #FF5733;"> ipsum et</a>
+                    <a class="btn btn-link" href="">R diam i</a>
+                    <a class="btn btn-link" href="">stet no </a>
+                    <a class="btn btn-link" href="">o labore l</a>
+                    <a class="btn btn-link" href="">lorem sit</a>
+                    <a class="btn btn-link" href=""> ipsum et</a>
                 </div>
             </div>
         </div>
