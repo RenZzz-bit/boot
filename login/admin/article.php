@@ -58,9 +58,7 @@ if (isset($_GET['id'])) {
             </div>
         </article>
 
-        <div class="back-button">
-            <a href=".../index.php" class="btn btn-primary">Back to Articles</a>
-        </div>
+        
     </div>
 
     <!-- Add any necessary JavaScript files here -->
