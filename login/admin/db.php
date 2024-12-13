@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";    // Update with your MySQL username
 $password = "";        // Update with your MySQL password
-$dbname = "news_website";  // The name of the database you created
+$dbname = "kaagapay";  // The name of the database you created
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

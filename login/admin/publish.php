@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Handle image upload
     $image = null;
     if (isset($_FILES['image']) && $_FILES['image']['error'] == 0) {
-        $target_dir = "images/";
+        $target_dir = "assets/";
         $image_name = basename($_FILES["image"]["name"]);
         $target_file = $target_dir . $image_name;
         
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 
     // Insert article into the database
-    $stmt = $conn->prepare("INSERT INTO articles (title, content, image) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO news (title, content, image) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $title, $content, $image);
     
     if ($stmt->execute()) {
