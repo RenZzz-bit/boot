@@ -4,13 +4,13 @@
 	<div class="container">
 		<div class="col-lg-10 offset-md-1" style="height:60vh">
 			<div class="position-relative image-fluid w-100 mb-1" style="height:65%">
-				<img src="assets/uploads/<?php echo $_SESSION['login_cover_pic'] ?>" alt="" class="gallery__image cover-pic img-fluid rounded-bottom">
+			<img src="assets/uploads/<?php echo !empty($_SESSION['login_cover_pic']) ? $_SESSION['login_cover_pic'] : 'bgg.png'; ?>" alt="" class="gallery__image cover-pic img-fluid rounded-bottom">
 				<div class="position-absolute" style="top:85%;right:3%;z-index:1">
 					<button class="btn btn-dark btn-sm bg-dark" type="button" id="edit_cover"><i class="fa fa-camera"></i> Edit Cover Photo</button>
 				</div>
 				<div class="w-100 d-flex justify-content-center position-absolute" style="top:50%">
 					<span class="position-relative">
-						<img src="assets/uploads/<?php echo $_SESSION['login_profile_pic'] ?>" alt="" class="img-fluid img-thumbnail rounded-circle" style="width:150px;height: 150px">
+					<img src="assets/uploads/<?php echo isset($_SESSION['login_profile_pic']) ? $_SESSION['login_profile_pic'] : 'default.jpg'; ?>" alt="Profile Picture" class="img-fluid img-thumbnail rounded-circle" style="width:150px;height: 150px">
 						<a href="javascript:void(0)" id="edit_pp" class="text-dark position-absolute rounded-circle img-thumbnail d-flex justify-content-center align-items-center" style="top:75%;left:75%;width:25px;height: 25px"><i class="fa fa-camera rounded-circle"></i></a>
 					</span>
 				</div>
@@ -40,7 +40,7 @@
 
 		                <strong><i class="fas fa-calendar-day mr-1"></i> Date of Birth</strong>
 
-		                <p class="text-muted"><?php echo date("M d,Y",strtotime($_SESSION['login_dob'])) ?></p>
+		                <p class="text-muted"><?php echo date("M d,Y",strtotime($_SESSION['login_dob'] ?? "Date of birth not available.")) ?></p>
 
 		                <hr>
 
