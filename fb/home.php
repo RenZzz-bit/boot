@@ -128,10 +128,10 @@ $result = $conn->query($sql);
 		<div class="gov-links mt-3">
 			<h5 class="text-dark text-center">Government Links</h5	>
 			<ul class="list-unstyled">
-				<li><a href="https://www.usa.gov" class="text-dark">USA.gov</a></li>
-				<li><a href="https://www.govtrack.us" class="text-dark">GovTrack</a></li>
-				<li><a href="https://www.ssa.gov" class="text-dark">Social Security Administration</a></li>
-				<li><a href="https://www.whitehouse.gov" class="text-dark">The White House</a></li>
+				<li><a href="https://owwa.gov.ph/" class="text-dark" target="_blank">OWWA.gov.ph</a></li>
+				<li><a href="https://dmw.gov.ph/archives/default.html" class="POEA.gov.ph" target="_blank">GovTrack</a></li>
+				<li><a href="https://www.foi.gov.ph/" class="text-dark" target="_blank">DOLE</a></li>
+				
 				<!-- Add more links as needed -->
 			</ul>
 		</div>
