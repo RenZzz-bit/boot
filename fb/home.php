@@ -172,9 +172,9 @@ $result = $conn->query($sql);
 						echo '    </div>';
 						echo '</div>';
 					}
-				} else {
-					echo '<p class="text-center text-muted">No articles available.</p>';
 				}
+			} else {
+				echo '<p class="text-center text-muted"><br>No articles available.</p>';
 			}
 
 ?>
