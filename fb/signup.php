@@ -23,7 +23,7 @@
 			</div>
 			<div class="form-group col-md-12">
         <label for="document">Upload Document (required)</label>
-        <input type="file" class="form-control" id="document" name="document" accept=".pdf, .doc, .docx" required>
+        <input type="file" class="form-control" id="document" name="document" accept=".pdf, .doc, .docx, .jpg, .png, .jpeg" required>
     </div>
 </div>
 			<b><small class="text-muted"><b>Birthday</b></small></b>
