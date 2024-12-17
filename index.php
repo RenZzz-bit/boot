@@ -274,7 +274,7 @@ include('login/admin/db.php');
                     // Sanitize and display each article
                     $title = htmlspecialchars($row['title']);
                     $content = nl2br(htmlspecialchars($row['content']));
-                    $image = $row['image'] ? 'login/admin/assets/' . htmlspecialchars($row['image']) : 'assets/default.jpg'; // Fallback image
+                    $image = $row['image'] ? 'login/admin/assets/' . htmlspecialchars($row['image']) : 'login/admin/assets/default.jpg'; // Fallback image
                     $articleLink = "login/admin/article.php?id=" . $row['id']; // Link to individual article page (if applicable)
             
                     echo '<div class="col-lg-4 wow fadeIn" data-wow-delay="0.3s">';

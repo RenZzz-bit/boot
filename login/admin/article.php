@@ -17,7 +17,7 @@ if (isset($_GET['id'])) {
         $article = $result->fetch_assoc();
         $title = htmlspecialchars($article['title']);
         $content = nl2br(htmlspecialchars($article['content']));
-        $image = $article['image'] ? 'login/admin/assets/' . htmlspecialchars($article['image']) : 'assets/default.jpg'; // Fallback image
+        $image = $article['image'] ? 'assets/' . htmlspecialchars($article['image']) : 'assets/default.jpg'; // Fallback image
         $createdAt = date('F j, Y', strtotime($article['created_at']));
     } else {
         echo "<h3>Article not found</h3>";
@@ -44,7 +44,7 @@ if (isset($_GET['id'])) {
 
         <article class="article-detail">
             <!-- Article Title -->
-            <h2 class="article-title"><?php echo $title; ?></h2>
+            <h2 class="article-title" ><?php echo $title; ?></h2>
 
             <!-- Article Image -->
             <img src="<?php echo $image; ?>" alt="<?php echo $title; ?>" class="article-image">

@@ -1,6 +1,17 @@
 <?php
 include 'db_connect.php';
+include('../login/admin/db.php');
+// Get the total number of articles
+$sqlCount = "SELECT COUNT(*) AS total FROM news";
+$resultCount = $conn->query($sqlCount);
+$rowCount = $resultCount->fetch_assoc();
+$totalArticles = $rowCount['total'];
+
+// Fetch articles for the current page
+$sql = "SELECT * FROM news ";
+$result = $conn->query($sql);
 ?>
+
 <style>
 	.left-panel{
 		width: calc(20%);
@@ -19,6 +30,16 @@ include 'db_connect.php';
 		border-left: 1px solid #ccc; 
 		border-right: 1px solid #ccc
 	}
+	.right-panel {
+        right: calc(1%);
+        width: calc(20%);
+        height: calc(100% - 3rem);
+        overflow: auto;
+        position: fixed;
+        background-color: #f8f9fa;
+        padding: 10px;
+        border-radius: 8px;
+    }
 	.side-nav:hover,.post-link:hover{
 		background: #00000026
 	}
@@ -115,6 +136,54 @@ include 'db_connect.php';
 			</ul>
 		</div>
 	</div>
+
+
+	<div class="d-flex w-100 h-100">
+    <!-- Right Panel -->
+    <div class="right-panel mt-1">
+        <!-- News Articles Section -->
+        <div class="news-articles mt-5 bg-white p-3 rounded">
+            <h5 class="text-dark text-center">Latest News</h5>
+            <div class="row g-3">
+			<?php
+			if (isset($result) && $result->num_rows > 0) {
+				// Limit the number of articles (e.g., limit to 5 articles)
+				$limit = 4;  // You can change this number as needed
+				$sql = "SELECT * FROM news ORDER BY created_at DESC LIMIT $limit"; // Modify the query to include LIMIT
+
+				$result = $conn->query($sql);  // Execute the query
+
+				if ($result->num_rows > 0) {
+					// Loop through articles
+					while ($row = $result->fetch_assoc()) {
+						$title = htmlspecialchars($row['title']);
+						$image = $row['image'] ? '../login/admin/assets/' . htmlspecialchars($row['image']) : '../login/admin/assets/default.jpg';
+						$articleLink = "../login/admin/article.php?id=" . $row['id'];
+
+						echo '<div class="col-12">';
+						echo '    <div class="news-item d-flex align-items-center border rounded p-2">';
+						echo '        <img src="' . $image . '" alt="" class="img-fluid rounded" style="width: 80px; height: 80px; object-fit: cover;">';
+						echo '        <div class="ms-3">';
+						echo '            <a href="' . $articleLink . '" class="text-decoration-none text-dark" target="_blank">';
+						echo '                <h6 class="mb-1"  style="padding-left: 5px;">' . $title . '</h6>';
+						echo '            </a>';
+						echo '            <small class="text-muted" style="padding-left: 5px;">' . date('F j, Y', strtotime($row['created_at'])) . '</small>';
+						echo '        </div>';
+						echo '    </div>';
+						echo '</div>';
+					}
+				} else {
+					echo '<p class="text-center text-muted">No articles available.</p>';
+				}
+			}
+
+?>
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 	<div class="center-panel py-3 px-2">
 		<div class="container-fluid">
