@@ -57,8 +57,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.php" class="nav-item nav-link active">Home</a>
-                        <a href="about.php" class="nav-item nav-link">About</a>
-                        <a href="hotline.php" class="nav-item nav-link">Hotlines</a>
+                        <a href="about.php#about" class="nav-item nav-link">About</a>
+                        <a href="hotline.php#hotlines" class="nav-item nav-link">Hotlines</a>
                         <a href="index.php#news" class="nav-item nav-link">News</a>
                         <a href="fb/login.php" class="nav-item nav-link" style="color: #FF5733;">Login</a>
                         <!-- <div class="nav-item dropdown">
@@ -124,12 +124,14 @@
 
 
     <!-- Feature Start  -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5" id=hotlines>
         <div class="container pt-5">
             <div class="row g-5">
                 <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
-                    <!-- <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Why Choose Us</div> -->
-                    <h1 class="text-white mb-4">What hotlines can OFWs use in case of emergencies?</h1>
+                <!-- <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">
+                    <a href="https://dmw.gov.ph/archives/contact.html" target="_blank" class="text-white">Philippine Overseas Employment Administration</a>
+                </div> -->
+                    <h3 class="text-white mb-4">What hotlines can OFWs use in case of emergencies?</h3>
                     <!-- <p class="text-white mb-4">OFWs can use the following hotlines for assistance:</p> -->
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
@@ -167,6 +169,9 @@
                         </div>
                         <span>International SOS</br>+65 6338 9277 for global medical and travel security assistance</span>
                     </div>
+                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">
+                    <a href="https://dmw.gov.ph/archives/contact.html" target="_blank" class="text-white">Philippine Overseas Employment Administration</a>
+                </div>
                     <div class="row g-4 pt-3">
                         <!-- <div class="col-sm-6">
                             <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">

@@ -57,8 +57,8 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto">
                         <a href="index.php" class="nav-item nav-link active" style="color: #FF5733;">Home</a>
-                        <a href="about.php" class="nav-item nav-link" style="color: #FF5733;">About</a>
-                        <a href="hotline.php" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
+                        <a href="about.php#about" class="nav-item nav-link" style="color: #FF5733;">About</a>
+                        <a href="hotline.php#hotlines" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
                         <a href="index.php#news" class="nav-item nav-link" style="color: #FF5733;">News</a>
                         <a href="fb/login.php" class="nav-item nav-link" style="color: #FF5733;">Login</a>
                         <!-- <div class="nav-item dropdown">
@@ -124,7 +124,7 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5">
+    <div class="container-fluid py-5" id=about>
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
