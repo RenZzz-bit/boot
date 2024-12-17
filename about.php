@@ -346,11 +346,9 @@
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                     <a href="index.php" class="d-inline-block mb-3">
-                        <h1 class="text-white">lorem<span class="text-primary">.</span>ipsum</h1>
+                        <h1 class="text-white">KAAGAPAY<span class="text-primary">.</span></h1>
                     </a>
-                    <p class="mb-0"  style="color: #FF5733;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                        clita duo justo et tempor</p>
+                    <p class="mb-0"  style="color: #FF5733;">is a web-based platform that supports overseas Filipino workers (OFWs) by providing legal aid, emergency assistance, news, and a safe space to connect and share experiences.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                 <h5 class="text-white mb-4" style="color: #FF5733;">Get In Touch</h5>
@@ -373,14 +371,14 @@
                     <a class="btn btn-link" href="">Terms & Condition</a>
                     <a class="btn btn-link" href="">Career</a>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <!-- <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="text-white mb-4">Our Services</h5>
                     <a class="btn btn-link" href="">lorem ipsum</a>
                     <a class="btn btn-link" href="">lorem ipsum</a>
                     <a class="btn btn-link" href="">lorem ipsum</a>
                     <a class="btn btn-link" href="">lorem ipsum</a>
                     <a class="btn btn-link" href="">lorem ipsum</a>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container wow fadeIn" data-wow-delay="0.1s">

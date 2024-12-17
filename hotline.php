@@ -123,35 +123,52 @@
     <!-- Full Screen Search End -->
 
 
-    <!-- Feature Start 
-    <div class="container-fluid bg-dark feature pt-5">
+    <!-- Feature Start  -->
+    <div class="container-fluid py-5">
         <div class="container pt-5">
             <div class="row g-5">
                 <div class="col-lg-6 align-self-center mb-md-5 pb-md-5 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Why Choose Us</div>
-                    <h1 class="text-white mb-4">We're Best in AI Industry with 10 Years of Experience</h1>
-                    <p class="text-light mb-4">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed
-                        stet no labore lorem sit. Sanctus clita duo justo et tempor</p>
+                    <!-- <div class="btn btn-sm border rounded-pill text-white px-3 mb-3">Why Choose Us</div> -->
+                    <h1 class="text-white mb-4">What hotlines can OFWs use in case of emergencies?</h1>
+                    <!-- <p class="text-white mb-4">OFWs can use the following hotlines for assistance:</p> -->
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
-                        <span>Diam dolor diam ipsum et tempor sit</span>
+                        <span>Philippine Embassy or Consulate:</br>Contact your nearest Philippine Embassy or Consulate for immediate help and support.</span>
                     </div>
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
-                        <span>Diam dolor diam ipsum et tempor sit</span>
+                        <span>OWWA Hotline (Overseas Workers Welfare Administration)</br>+63 2 891 7601</span>
                     </div>
                     <div class="d-flex align-items-center text-white mb-3">
                         <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
                             <i class="fa fa-check"></i>
                         </div>
-                        <span>Diam dolor diam ipsum et tempor sit</span>
+                        <span>POEA Hotline (Philippine Overseas Employment Administration)</br>+63 2 722 1144</span>
+                    </div>
+                    <div class="d-flex align-items-center text-white mb-3">
+                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <span>DOLE Hotline (Department of Labor and Employment)</br>+63 2 1349</span>
+                    </div>
+                    <div class="d-flex align-items-center text-white mb-3">
+                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <span>Philippine Red Cross</br>143 or +63 2 8527 8385</span>
+                    </div>
+                    <div class="d-flex align-items-center text-white mb-3">
+                        <div class="btn-sm-square bg-white text-primary rounded-circle me-3">
+                            <i class="fa fa-check"></i>
+                        </div>
+                        <span>International SOS</br>+65 6338 9277 for global medical and travel security assistance</span>
                     </div>
                     <div class="row g-4 pt-3">
-                        <div class="col-sm-6">
+                        <!-- <div class="col-sm-6">
                             <div class="d-flex rounded p-3" style="background: rgba(256, 256, 256, 0.1);">
                                 <i class="fa fa-home fa-3x text-white"></i>
                                 <div class="ms-3">
@@ -168,16 +185,17 @@
                                     <p class="text-white mb-0">Project Complete</p>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="col-lg-6 align-self-end text-center text-md-end wow fadeIn" data-wow-delay="0.5s">
-                    <img class="img-fluid" src="img/front.png" alt="">
+                    <img class="img-fluid" src="img/phone.png" alt="">
                 </div>
             </div>
         </div>
     </div>
-    Feature End -->
+    <!-- Feature End -->
+     
 
 
     <!-- Newsletter Start 
@@ -210,11 +228,9 @@
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
                     <a href="index.php" class="d-inline-block mb-3">
-                        <h1 class="text-white">lorem<span class="text-primary">.</span>ipsum</h1>
+                    <h1 class="" style="color: #FF5733;">KAA<span class="text-primary"></span>GAPAY</h1>
                     </a>
-                    <p class="mb-0" style="color: #FF5733;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                        clita duo justo et tempor</p>
+                    <p class="mb-0" style="color: #FF5733;">is a web-based platform that supports overseas Filipino workers (OFWs) by providing legal aid, emergency assistance, news, and a safe space to connect and share experiences.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                 <h5 class="text-white mb-4" style="color: #FF5733;">Get In Touch</h5>
@@ -237,14 +253,14 @@
                     <a class="btn btn-link" href="">Terms & Condition</a>
                     <a class="btn btn-link" href="">Career</a>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <!-- <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="text-white mb-4">Our Services</h5>
                     <a class="btn btn-link" href="">lorem ipsum</a>
                     <a class="btn btn-link" href="">lorem ipsum</a>
                     <a class="btn btn-link" href="">lorem ipsum</a>
                     <a class="btn btn-link" href="">lorem ipsum</a>
                     <a class="btn btn-link" href="">lorem ipsum</a>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container wow fadeIn" data-wow-delay="0.1s">

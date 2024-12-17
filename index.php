@@ -128,7 +128,7 @@ include('login/admin/db.php');
                     <div class="navbar-nav ms-auto">
                     <a href="index.php" class="nav-item nav-link active" style="color: #FF5733;">Home</a>
                         <a href="about.php" class="nav-item nav-link" style="color: #FF5733;">About</a>
-                        <a href="hotline.php" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
+                        <a href="hotline.php#container-fluid py-5" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
                         <a href="index.php#news" class="nav-item nav-link" style="color: #FF5733;">News</a>
                         <a href="fb/login.php" class="nav-item nav-link" style="color: #FF5733;">Login</a>
                         <!-- <div class="nav-item dropdown">
@@ -155,8 +155,7 @@ include('login/admin/db.php');
                 <div class="col-lg-6 align-self-center text-center text-lg-start mb-lg-5">
                     <div class="btn btn-sm border rounded-pill  px-3 mb-3 animated slideInRight" style="color: #FF5733;">KAAGAPAY</div>
                     <h1 class="display-4  mb-4 animated slideInRight" style="color: #FF5733;">Bridging OFW across the world</h1>
-                    <p class=" mb-4 animated slideInRight" style="color: #FF5733;">Tempor rebum no at dolore lorem clita rebum rebum ipsum
-                        rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit</p>
+                    <p class=" mb-4 animated slideInRight" style="color: #FF5733;">KAAGAPAY provides a unified platform where Overseas Filipino Workers (OFWs) can find essential resources, support, and a sense of community, no matter where they are in the world.</p>
                     <a href="fb/login.php" class="btn btn-light py-sm-3 px-sm-5 rounded-pill me-3 animated slideInRight" style="color: #FF5733;">Join Now</a>
                     <!-- <a href="" class="btn btn-outline-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a> -->
                 </div>
@@ -208,22 +207,20 @@ include('login/admin/db.php');
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.1s">
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
-                                            <i class="fa fa-robot fa-2x" style="color: #FF5733;"></i>
+                                            <i class="fa fa-heart fa-2x" style="color: #FF5733;"></i>
                                         </div>
-                                        <h5 class="mb-3">Rorat ipsum justo</h5>
-                                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                                            diam sed stet lorem.</p>
+                                        <h5 class="mb-3">Connecting and Supporting OFWs</h5>
+                                        <p>KAAGAPAY is a comprehensive web-based platform specifically designed to connect and support overseas Filipino workers (OFWs), providing essential resources such as legal aid, emergency assistance, and up-to-date news.</p>
                                         <a class="btn px-3 mt-auto mx-auto" href="" style="color: #FF5733;">Read More</a>
                                     </div>
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.5s">
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
-                                            <i class="fa fa-power-off fa-2x" style="color: #FF5733;"></i>
+                                            <i class="fa fa-heart fa-2x" style="color: #FF5733;"></i>
                                         </div>
-                                        <h5 class="mb-3">ipsum justo</h5>
-                                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                                            diam sed stet lorem.</p>
+                                        <h5 class="mb-3">Community Interaction</h5>
+                                        <p>Through KAAGAPAY, users can interact and share experiences, fostering a supportive community among OFWs.</p>
                                         <a class="btn px-3 mt-auto mx-auto" href="" style="color: #FF5733;">Read More</a>
                                     </div>
                                 </div>
@@ -234,22 +231,20 @@ include('login/admin/db.php');
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.3s">
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
-                                            <i class="fa fa-graduation-cap fa-2x" style="color: #FF5733;"></i>
+                                            <i class="fa fa-heart fa-2x" style="color: #FF5733;"></i>
                                         </div>
-                                        <h5 class="mb-3">elitr dolor</h5>
-                                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                                            diam sed stet lorem.</p>
+                                        <h5 class="mb-3">Safe and Accessible Environment</h5>
+                                        <p>The platform provides a safe and accessible environment where OFWs can access vital information and support each other.</p>
                                         <a class="btn px-3 mt-auto mx-auto" href="" style="color: #FF5733;">Read More</a>
                                     </div>
                                 </div>
                                 <div class="col-12 wow fadeIn" data-wow-delay="0.7s">
                                     <div class="service-item d-flex flex-column justify-content-center text-center rounded">
                                         <div class="service-icon btn-square">
-                                            <i class="fa fa-brain fa-2x" style="color: #FF5733;"></i>
+                                            <i class="fa fa-heart fa-2x" style="color: #FF5733;"></i>
                                         </div>
-                                        <h5 class="mb-3">duo et elitr</h5>
-                                        <p>Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet
-                                            diam sed stet lorem.</p>
+                                        <h5 class="mb-3">Empowering OFWs</h5>
+                                        <p>KAAGAPAY ensures that OFWs have the tools and resources they need to navigate challenges and stay connected with their community.</p>
                                         <a class="btn px-3 mt-auto mx-auto" href="" style="color: #FF5733;">Read More</a>
                                     </div>
                                 </div>
@@ -303,7 +298,7 @@ include('login/admin/db.php');
             <div class="pagination text-center mt-4">
                 <?php
                 for ($page = 1; $page <= $totalPages; $page++) {
-                    echo "<a href='?page=$page' class='btn btn-primary btn-sm pagination-btn'>$page</a>";
+                    echo "<a href='?page=$page index.php#news' class='btn btn-primary btn-sm pagination-btn'>$page</a>";
                 }
                 ?>
             </div>
@@ -327,13 +322,13 @@ include('login/admin/db.php');
                             <h2 class="accordion-header" id="headingOne">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                    How to build a website?
+                                    How to use KAAGAPAY?
                                 </button>
                             </h2>
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionFAQ1">
                                 <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
+                                KAAGAPAY is user-friendly and easy to navigate. Simply sign up, complete your profile, and start exploring the resources available for OFWs, including legal aid, emergency assistance, and community forums.
                                 </div>
                             </div>
                         </div>
@@ -341,13 +336,13 @@ include('login/admin/db.php');
                             <h2 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    How long will it take to get a new website?
+                                    What services does KAAGAPAY offer?
                                 </button>
                             </h2>
                             <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                                 data-bs-parent="#accordionFAQ1">
                                 <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
+                                KAAGAPAY offers a range of services including news updates, and a community platform for OFWs to interact and share experiences."
                                 </div>
                             </div>
                         </div>
@@ -355,13 +350,13 @@ include('login/admin/db.php');
                             <h2 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    Do you only create HTML websites?
+                                    Is KAAGAPAY free to use?
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionFAQ1">
                                 <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
+                                Yes, KAAGAPAY is completely free for all OFWs. We aim to provide essential support and resources without any cost.
                                 </div>
                             </div>
                         </div>
@@ -369,13 +364,13 @@ include('login/admin/db.php');
                             <h2 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                                    Will my website be mobile-friendly?
+                                    Can I connect with other OFWs on KAAGAPAY?
                                 </button>
                             </h2>
                             <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                                 data-bs-parent="#accordionFAQ1">
                                 <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
+                                    Absolutely! KAAGAPAY is designed to foster a community where OFWs can connect, share experiences, and support each other.
                                 </div>
                             </div>
                         </div>
@@ -387,13 +382,13 @@ include('login/admin/db.php');
                             <h2 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    Will you maintain my site for me?
+                                    How do I get legal assistance through KAAGAPAY?
                                 </button>
                             </h2>
                             <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
                                 data-bs-parent="#accordionFAQ2">
                                 <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
+                                KAAGAPAY provides access to legal resources and contacts. You can find information and support for various legal issues you might face as an OFW.
                                 </div>
                             </div>
                         </div>
@@ -401,13 +396,13 @@ include('login/admin/db.php');
                             <h2 class="accordion-header" id="headingSix">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    I’m on a strict budget. Do you have any low cost options?
+                                    How do I stay updated with news on KAAGAPAY?
                                 </button>
                             </h2>
                             <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
                                 data-bs-parent="#accordionFAQ2">
                                 <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
+                                KAAGAPAY features a news section that provides the latest updates relevant to OFWs. You can access important news, announcements, and advisories directly from the platform.
                                 </div>
                             </div>
                         </div>
@@ -415,13 +410,13 @@ include('login/admin/db.php');
                             <h2 class="accordion-header" id="headingSeven">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    Will you maintain my site for me?
+                                    What kind of support can I expect from the KAAGAPAY community?
                                 </button>
                             </h2>
                             <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
                                 data-bs-parent="#accordionFAQ2">
                                 <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
+                                    The KAAGAPAY community offers peer support, advice, and shared experiences. You can ask questions, share your story, and receive encouragement from fellow OFWs.
                                 </div>
                             </div>
                         </div>
@@ -429,13 +424,13 @@ include('login/admin/db.php');
                             <h2 class="accordion-header" id="headingEight">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    I’m on a strict budget. Do you have any low cost options?
+                                    Is my personal information safe on KAAGAPAY?
                                 </button>
                             </h2>
                             <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
                                 data-bs-parent="#accordionFAQ2">
                                 <div class="accordion-body">
-                                    Dolor nonumy tempor elitr et rebum ipsum sit duo duo. Diam sed sed magna et magna diam aliquyam amet dolore ipsum erat duo. Sit rebum magna duo labore no diam.
+                                Yes, KAAGAPAY takes privacy and security seriously. We ensure that your personal information is protected and only accessible to you and authorized personnel.
                                 </div>
                             </div>
                         </div>
@@ -455,9 +450,7 @@ include('login/admin/db.php');
                     <a href="index.php" class="d-inline-block mb-3">
                         <h1 class="" style="color: #FF5733;">KAA<span class="text-primary"></span>GAPAY</h1>
                     </a>
-                    <p class="mb-0" style="color: #FF5733;">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
-                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
-                        clita duo justo et tempor</p>
+                    <p class="mb-0" style="color: #FF5733;">is a web-based platform that supports overseas Filipino workers (OFWs) by providing legal aid, emergency assistance, news, and a safe space to connect and share experiences.</p>
                 </div>
                 <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
                     <h5 class="text-white mb-4" style="color: #FF5733;">Get In Touch</h5>
@@ -480,14 +473,14 @@ include('login/admin/db.php');
                     <a class="btn btn-link" href="">Terms & Condition</a>
                     <a class="btn btn-link" href="">Career</a>
                 </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                <!-- <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
                     <h5 class="text-white mb-4" style="color: #FF5733;">Our Services</h5>
                     <a class="btn btn-link" href="">R diam i</a>
                     <a class="btn btn-link" href="">stet no </a>
                     <a class="btn btn-link" href="">o labore l</a>
                     <a class="btn btn-link" href="">lorem sit</a>
                     <a class="btn btn-link" href=""> ipsum et</a>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="container wow fadeIn" data-wow-delay="0.1s">
