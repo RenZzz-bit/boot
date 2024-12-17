@@ -89,21 +89,26 @@
 </style>
 <script>
 	$('#signup').submit(function(e){
-		e.preventDefault()
-		$('#msg').html('')
-		start_load()
-		$.ajax({
-			url:"ajax.php?action=signup",
-			method:"POST",
-			data:$(this).serialize(),
-			success:function(resp){
-				if(resp == 1){
-					location.replace("index.php?page=additional_info")
-				}else if(resp ==2){
-					$('#msg').html("<div class='alert alert-danger'>Email already exist.</div>")
-					end_load()
-				}
-			}
-		})
-	})
+    e.preventDefault();
+    $('#msg').html('');
+    start_load();
+
+    $.ajax({
+        url: "ajax.php?action=signup",
+        method: "POST",
+        data: $(this).serialize(),
+        success: function(resp) {
+            if (resp == 1) {
+                location.replace("index.php?page=additional_info");
+            } else if (resp == 2) {
+                $('#msg').html("<div class='alert alert-danger'>Email already exists.</div>");
+                end_load();
+            } else {
+                $('#msg').html("<div class='alert alert-danger'>" + resp + "</div>");
+                end_load();
+            }
+        }
+    });
+});
+
 </script>
