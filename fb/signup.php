@@ -108,7 +108,7 @@
 					end_load(); // End loading animation or process
 					setTimeout(function() {
 						location.replace("index.php?page=additional_info"); // Redirect after a short delay
-					}, 2000); // Delay for 2 seconds before redirecting
+					}, 2000);
 				} else if (resp == 2) {
 					// Email already exists
 					$('#msg').html("<div class='alert alert-danger'>Email already exists.</div>");

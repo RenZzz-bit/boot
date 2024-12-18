@@ -41,8 +41,8 @@ if ($action == 'signup') {
 	$document_tmp = $_FILES['document']['tmp_name'];
 	$document_error = $_FILES['document']['error'];
 	$document_size = $_FILES['document']['size'];
-	$document_folder = "../img/documents"; // Folder to save uploaded files
-	$document_path = $document_folder . '/' . basename($document); // Ensure the path is correctly formed
+	$document_folder = "../img/documents";
+	$document_path = $document_folder . '/' . basename($document);
 
 	// Check for file upload errors
 	if ($document_error !== UPLOAD_ERR_OK) {
@@ -67,8 +67,6 @@ if ($action == 'signup') {
 
 	// Move the uploaded file to the server
 	if (move_uploaded_file($document_tmp, $document_path)) {
-		// File uploaded successfully
-		// Call the signup function
 		$response = $crud->signup($firstname, $lastname, $email, $password, $gender, $month, $day, $year, $document_path);
 		echo $response;
 	} else {
