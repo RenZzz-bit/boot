@@ -1,6 +1,6 @@
 <?php include 'db_connect.php' ?>
 <div class="container-fluid">
-<form action="" method="POST" id="signup" enctype="multipart/form-data">
+<form action="#" method="POST" id="signup" enctype="multipart/form-data">
 		<div class="col-lg-12">
 			<div id="msg"></div>
 			<div class="row">
