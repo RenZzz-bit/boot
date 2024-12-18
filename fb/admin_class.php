@@ -128,80 +128,84 @@ Class Action {
 		}
 	}
 	public function signup() {
-        // Check if form data is posted
-        if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password'])) {
-            // Sanitize user inputs to prevent SQL injection
-            $firstname = $this->conn->real_escape_string($_POST['firstname']);
-            $lastname = $this->conn->real_escape_string($_POST['lastname']);
-            $email = $this->conn->real_escape_string($_POST['email']);
-            $password = $_POST['password'];  // Password will be hashed before storing
-            $gender = isset($_POST['gender']) ? $_POST['gender'] : 'Not specified';  // Default if not selected
-            $birthday = $_POST['year'] . '-' . $_POST['month'] . '-' . $_POST['day'];  // Assuming YYYY-MM-DD format
-
-            // Validate Email (example)
-            if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-                return "Invalid email format.";
-            }
-
-            // Check if email already exists
-            $query = "SELECT * FROM users WHERE email = ?";
-            $stmt = $this->conn->prepare($query);
-            $stmt->bind_param("s", $email);
-            $stmt->execute();
-            $result = $stmt->get_result();
-
-            if ($result->num_rows > 0) {
-                return "Email already exists.";
-            }
-
-            // Hash the password before storing it
-            $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-            // Optional: Handle file upload (Document Upload)
-            $document = '';
-            if (isset($_FILES['document']) && $_FILES['document']['error'] == 0) {
-                $document = $this->uploadDocument($_FILES['document']);
-            }
-
-            // Insert the user data into the database
-            $query = "INSERT INTO users (firstname, lastname, email, password, gender, dob, document, verified) 
-                      VALUES (?, ?, ?, ?, ?, ?, ?, 0)";  // 'verified' set to 0 initially (user is not verified)
-            $stmt = $this->conn->prepare($query);
-            $stmt->bind_param("sssssss", $firstname, $lastname, $email, $hashedPassword, $gender, $birthday, $document);
-            $stmt->execute();
-
-            if ($stmt->affected_rows > 0) {
-                // Optional: Send a verification email here
-                // sendVerificationEmail($email);
-
-                return "Registration successful! Please check your email for verification.";
-            } else {
-                return "An error occurred. Please try again.";
-            }
-        } else {
-            return "Please fill in all the required fields.";
-        }
-    }
-
-    // File Upload Logic (optional)
-    private function uploadDocument($file) {
-        $allowedExtensions = ['pdf', 'doc', 'docx'];
-        $extension = pathinfo($file['name'], PATHINFO_EXTENSION);
-
-        if (!in_array($extension, $allowedExtensions)) {
-            return "Invalid document format. Please upload a PDF or Word document.";
-        }
-
-        $targetDir = "uploads/documents/";
-        $fileName = time() . "_" . basename($file['name']);
-        $targetFile = $targetDir . $fileName;
-
-        if (move_uploaded_file($file['tmp_name'], $targetFile)) {
-            return $fileName;  // Return the document name to store in the database
-        }
-
-        return "Error uploading document.";
-    }
+		// Check if form data is posted
+		if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password'])) {
+			// Sanitize user inputs to prevent SQL injection
+			$firstname = $this->conn->real_escape_string($_POST['firstname']);
+			$lastname = $this->conn->real_escape_string($_POST['lastname']);
+			$email = $this->conn->real_escape_string($_POST['email']);
+			$password = $_POST['password'];  // Password will be hashed before storing
+			$gender = isset($_POST['gender']) ? $_POST['gender'] : 'Not specified';  // Default if not selected
+			$birthday = $_POST['year'] . '-' . $_POST['month'] . '-' . $_POST['day'];  // Assuming YYYY-MM-DD format
+	
+			// Validate Email
+			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+				return "Invalid email format.";
+			}
+	
+			// Check if email already exists
+			$query = "SELECT * FROM users WHERE email = ?";
+			$stmt = $this->conn->prepare($query);
+			$stmt->bind_param("s", $email);
+			$stmt->execute();
+			$result = $stmt->get_result();
+	
+			if ($result->num_rows > 0) {
+				return "Email already exists.";
+			}
+	
+			// Hash the password before storing it
+			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+	
+			// Handle file upload (Document Upload)
+			$document = '';
+			if (isset($_FILES['document']) && $_FILES['document']['error'] == 0) {
+				$document = $this->uploadDocument($_FILES['document']);
+				if (is_string($document)) {
+					return $document; // If an error message is returned, stop execution
+				}
+			}
+	
+			// Insert the user data into the database
+			$query = "INSERT INTO users (firstname, lastname, email, password, gender, dob, document, verified) 
+					  VALUES (?, ?, ?, ?, ?, ?, ?, 0)";
+			$stmt = $this->conn->prepare($query);
+			$stmt->bind_param("sssssss", $firstname, $lastname, $email, $hashedPassword, $gender, $birthday, $document);
+			$stmt->execute();
+	
+			if ($stmt->affected_rows > 0) {
+				return "Registration successful! Please check your email for verification.";
+			} else {
+				return "An error occurred. Please try again.";
+			}
+		} else {
+			return "Please fill in all the required fields.";
+		}
+	}
+	
+	// File Upload Logic (optional)
+	private function uploadDocument($file) {
+		$allowedExtensions = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'];
+		$extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+	
+		if (!in_array(strtolower($extension), $allowedExtensions)) {
+			return "Invalid document format. Please upload a PDF, DOC, DOCX, JPG, JPEG, or PNG document.";
+		}
+	
+		$targetDir = "img/ID/";
+		$fileName = time() . "_" . basename($file['name']);
+		$targetFile = $targetDir . $fileName;
+	
+		// Ensure the target directory exists and is writable
+	
+		// Check if the file was uploaded successfully
+		if (move_uploaded_file($file['tmp_name'], $targetFile)) {
+			return $fileName;  // Return the document name to store in the database
+		}
+	
+		return "Error uploading document.";
+	}
+	
 
     // Optional: Send verification email (logic can be customized)
     private function sendVerificationEmail($email) {

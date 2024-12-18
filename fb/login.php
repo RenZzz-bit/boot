@@ -246,7 +246,7 @@ header("location:index.php?page=home");
 	$('#new_account').click(function(){
 		uni_modal("<h4>Sign Up</h4><span><h6 class='text-muted'>It’s quick and easy.</h6></span>","signup.php")
 	})
-	$('#login-form').submit(function(e) { 
+	/* $('#login-form').submit(function(e) { 
     e.preventDefault();
     start_load();  // Start loading animation
 
@@ -283,7 +283,7 @@ header("location:index.php?page=home");
             }
         }
     });
-});
+}) */
 	$('.number').on('input keyup keypress',function(){
         var val = $(this).val()
         val = val.replace(/[^0-9 \,]/, '');

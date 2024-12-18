@@ -1,6 +1,6 @@
 <?php include 'db_connect.php' ?>
 <div class="container-fluid">
-	<form action="" id="signup">
+<form action="" method="POST" id="signup" enctype="multipart/form-data">
 		<div class="col-lg-12">
 			<div id="msg"></div>
 			<div class="row">
@@ -24,8 +24,8 @@
 			<div class="form-group col-md-12">
         <label for="document">Upload Document (required)</label>
         <input type="file" class="form-control" id="document" name="document" accept=".pdf, .doc, .docx, .jpg, .png, .jpeg" required>
-    </div>
-</div>
+        </div>
+        </div>
 			<b><small class="text-muted"><b>Birthday</b></small></b>
 			<div class="row">
 				<div class="form-group col-md-4">
