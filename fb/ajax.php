@@ -5,76 +5,122 @@ date_default_timezone_set("Asia/Manila");
 $action = $_GET['action'];
 include 'admin_class.php';
 $crud = new Action();
-if($action == 'login'){
+if ($action == 'login') {
 	$login = $crud->login();
-	if($login)
+	if ($login)
 		echo $login;
 }
-if($action == 'login2'){
+if ($action == 'login2') {
 	$login = $crud->login2();
-	if($login)
+	if ($login)
 		echo $login;
 }
-if($action == 'logout'){
+if ($action == 'logout') {
 	$logout = $crud->logout();
-	if($logout)
+	if ($logout)
 		echo $logout;
 }
-if($action == 'logout2'){
+if ($action == 'logout2') {
 	$logout = $crud->logout2();
-	if($logout)
+	if ($logout)
 		echo $logout;
+}
+if ($action == 'signup') {
+	// Get form data
+	$firstname = $_POST['firstname'];
+	$lastname = $_POST['lastname'];
+	$email = $_POST['email'];
+	$password = $_POST['password'];
+	$gender = $_POST['gender'];
+	$month = $_POST['month'];
+	$day = $_POST['day'];
+	$year = $_POST['year'];
+
+	// Handle file upload
+	$document = $_FILES['document']['name'];
+	$document_tmp = $_FILES['document']['tmp_name'];
+	$document_error = $_FILES['document']['error'];
+	$document_size = $_FILES['document']['size'];
+	$document_folder = "../img/documents"; // Folder to save uploaded files
+	$document_path = $document_folder . '/' . basename($document); // Ensure the path is correctly formed
+
+	// Check for file upload errors
+	if ($document_error !== UPLOAD_ERR_OK) {
+		echo "Error uploading document. Error code: $document_error";
+		exit;
+	}
+
+	// Optional: Check file size (e.g., max 2MB)
+	if ($document_size > 2 * 1024 * 1024) {
+		echo "File is too large. Maximum size is 2MB.";
+		exit;
+	}
+
+	// Optional: Check file type (e.g., only allow PDF, JPG, PNG)
+	$allowed_types = ['image/jpeg', 'image/png', 'application/pdf'];
+	$document_type = mime_content_type($document_tmp);
+
+	if (!in_array($document_type, $allowed_types)) {
+		echo "Invalid file type. Only JPG, PNG, and PDF are allowed.";
+		exit;
+	}
+
+	// Move the uploaded file to the server
+	if (move_uploaded_file($document_tmp, $document_path)) {
+		// File uploaded successfully
+		// Call the signup function
+		$response = $crud->signup($firstname, $lastname, $email, $password, $gender, $month, $day, $year, $document_path);
+		echo $response;
+	} else {
+		// Error uploading file
+		echo "Error uploading document.";
+	}
 }
 
-if($action == 'signup'){
-	$save = $crud->signup();
-	if($save)
-		echo $save;
-}
-if($action == 'save_user'){
+
+if ($action == 'save_user') {
 	$save = $crud->save_user();
-	if($save)
+	if ($save)
 		echo $save;
 }
-if($action == 'update_user'){
+if ($action == 'update_user') {
 	$save = $crud->update_user();
-	if($save)
+	if ($save)
 		echo $save;
 }
-if($action == 'delete_user'){
+if ($action == 'delete_user') {
 	$save = $crud->delete_user();
-	if($save)
+	if ($save)
 		echo $save;
 }
-if($action == 'save_post'){
+if ($action == 'save_post') {
 	$save = $crud->save_post();
-	if($save)
+	if ($save)
 		echo $save;
 }
-if($action == 'delete_post'){
+if ($action == 'delete_post') {
 	$delete = $crud->delete_post();
-	if($delete)
+	if ($delete)
 		echo $delete;
 }
-if($action=='like'){
+if ($action == 'like') {
 	$save = $crud->like();
-	if($save)
+	if ($save)
 		echo $save;
 }
-if($action == 'save_comment'){
+if ($action == 'save_comment') {
 	$save = $crud->save_comment();
-	if($save)
+	if ($save)
 		echo $save;
 }
-if($action == 'update_cover'){
+if ($action == 'update_cover') {
 	$save = $crud->update_cover();
-	if($save)
-echo $save;
+	if ($save)
+		echo $save;
 }
-if($action == 'update_profile'){
+if ($action == 'update_profile') {
 	$save = $crud->update_profile();
-	if($save)
-echo $save;
+	if ($save)
+		echo $save;
 }
 ob_end_flush();
-?>
