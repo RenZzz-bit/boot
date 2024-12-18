@@ -5,29 +5,64 @@ Class Action {
 	private $db;
 
 	public function __construct() {
-		ob_start();
-   	include 'db_connect.php';
-    
-    $this->db = $conn;
-	}
-	function __destruct() {
-	    $this->db->close();
-	    ob_end_flush();
-	}
+        // Establish the database connection
+        $this->conn = new mysqli("localhost", "root", "", "kaagapay");
 
-	function login(){
-		extract($_POST);
-			$qry = $this->db->query("SELECT *,concat(firstname,' ',lastname) as name FROM users where email = '".$email."' and password = '".md5($password)."' ");
-		if($qry->num_rows > 0){
-			foreach ($qry->fetch_array() as $key => $value) {
-				if($key != 'password' && !is_numeric($key))
-					$_SESSION['login_'.$key] = $value;
-			}
-				return 1;
-		}else{
-			return 3;
+        // Check if the connection is successful
+        if ($this->conn->connect_error) {
+            // If there's an error, display a message and stop execution
+            die("Connection failed: " . $this->conn->connect_error);
+        }
+    }
+	public function __destruct() {
+        // Only try to close the connection if it's successfully initialized
+        if ($this->conn) {
+            $this->conn->close();
+        }
+    }
+
+	function login() {
+		// Check if form is submitted
+		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+			$email = $_POST['email'];
+			$password = $_POST['password'];
+	
+			// Sanitize inputs to avoid SQL injection
+			$email = $this->conn->real_escape_string($email);
+			$password = $this->conn->real_escape_string($password);
+	
+			// Query to get the user by email
+			$query = "SELECT * FROM users WHERE email = ?";
+			$stmt = $this->conn->prepare($query);
+			$stmt->bind_param("s", $email);
+			$stmt->execute();
+			$result = $stmt->get_result();
+	
+			// Check if the user exists
+			if ($result->num_rows > 0) {
+				$user = $result->fetch_assoc();
+	
+				// Check if user is verified
+				if ($user['verified'] == 1) {
+					// Verify the password
+					if (password_verify($password, $user['password'])) {
+						// Password matches and user is verified, log the user in
+						$_SESSION['user_id'] = $user['id'];
+						$_SESSION['user_email'] = $user['email'];
+	
+						return "Login successful!";
+					} else {
+						return "Incorrect password.";
+					}
+				} else {
+					return "Your account is not verified yet.";
+				}
+			} else {
+				return "No account found with that email.";
+			}	
 		}
 	}
+
 	function logout(){
 		session_destroy();
 		foreach ($_SESSION as $key => $value) {
@@ -92,74 +127,86 @@ Class Action {
 			return 1;
 		}
 	}
-	function signup(){
-		extract($_POST);
-		$data = "";
-		foreach($_POST as $k => $v){
-			if(!in_array($k, array('id','cpass','month','day','year')) && !is_numeric($k)){
-				if($k =='password'){
-					if(empty($v))
-						continue;
-					$v = md5($v);
-
+	public function signup() {
+		if (isset($_POST['firstname'], $_POST['lastname'], $_POST['email'], $_POST['password'])) {
+			$firstname = $this->conn->real_escape_string($_POST['firstname']);
+			$lastname = $this->conn->real_escape_string($_POST['lastname']);
+			$email = $this->conn->real_escape_string($_POST['email']);
+			$password = $_POST['password']; 
+			$gender = isset($_POST['gender']) ? $_POST['gender'] : 'Not specified'; 
+			$birthday = $_POST['year'] . '-' . $_POST['month'] . '-' . $_POST['day']; 
+	
+			if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+				return "Invalid email format.";
+			}
+	
+			$query = "SELECT * FROM users WHERE email = ?";
+			$stmt = $this->conn->prepare($query);
+			$stmt->bind_param("s", $email);
+			$stmt->execute();
+			$result = $stmt->get_result();
+			if ($result->num_rows > 0) {
+				return "Email already exists.";
+			}
+	
+			$hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+	
+			// Handle document upload
+			$document = '';
+			if (isset($_FILES['document']) && $_FILES['document']['error'] == 0) {
+				$document = $this->uploadDocument($_FILES['document']);
+				if (is_string($document)) {
+					return $document; 
 				}
-				if(empty($data)){
-					$data .= " $k='$v' ";
-				}else{
-					$data .= ", $k='$v' ";
-				}
 			}
-		}
-		if(isset($month)){
-					$data .= ", dob='{$year}-{$month}-{$day}' ";
-		}
-		if(isset($email)){
-			$check = $this->db->query("SELECT * FROM users where email ='$email' ".(!empty($id) ? " and id != {$id} " : ''))->num_rows;
-			if($check > 0){
-				return 2;
-				exit;
+	
+			// Insert user data
+			$query = "INSERT INTO users (firstname, lastname, email, password, gender, dob, document, verified) 
+					  VALUES (?, ?, ?, ?, ?, ?, ?, 0)";
+			$stmt = $this->conn->prepare($query);
+			$stmt->bind_param("sssssss", $firstname, $lastname, $email, $hashedPassword, $gender, $birthday, $document);
+			if ($stmt->execute()) {
+				return "Registration successful! Please check your email for verification.";
+			} else {
+				return "Error executing query: " . $stmt->error;
 			}
-		}
-		if(isset($_FILES['pp']) && $_FILES['pp']['tmp_name'] != ''){
-			$fnamep = strtotime(date('y-m-d H:i')).'_'.$_FILES['pp']['name'];
-			$move = move_uploaded_file($_FILES['pp']['tmp_name'],'assets/uploads/'. $fnamep);
-			$data .= ", profile_pic = '$fnamep' ";
-
-		}
-		if(isset($_FILES['cover']) && $_FILES['cover']['tmp_name'] != ''){
-			$fnamec = strtotime(date('y-m-d H:i')).'_'.$_FILES['cover']['name'];
-			$move = move_uploaded_file($_FILES['cover']['tmp_name'],'assets/uploads/'. $fnamec);
-			$data .= ", cover_pic = '$fnamec' ";
-
-		}
-		if(empty($id)){
-			$save = $this->db->query("INSERT INTO users set $data");
-
-		}else{
-			$save = $this->db->query("UPDATE users set $data where id = $id");
-		}
-
-		if($save){
-			if(empty($id))
-				$id = $this->db->insert_id;
-			foreach ($_POST as $key => $value) {
-				if(!in_array($key, array('id','cpass','password')) && !is_numeric($key))
-					if($k = 'pp'){
-						$k ='profile_pic';
-					}
-					if($k = 'cover'){
-						$k ='cover_pic';
-					}
-					$_SESSION['login_'.$key] = $value;
-			}
-					$_SESSION['login_id'] = $id;
-					if(isset($_FILES['pp']) &&$_FILES['pp']['tmp_name'] != '')
-						$_SESSION['login_profile_pic'] = $fnamep;
-					if(isset($_FILES['cover']) &&$_FILES['cover']['tmp_name'] != '')
-						$_SESSION['login_cover_pic'] = $fnamec;
-			return 1;
+		} else {
+			return "Please fill in all the required fields.";
 		}
 	}
+	
+	
+	// File Upload Logic (optional)
+	private function uploadDocument($file) {
+		$allowedExtensions = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png'];
+		$extension = pathinfo($file['name'], PATHINFO_EXTENSION);
+	
+		if (!in_array(strtolower($extension), $allowedExtensions)) {
+			return "Invalid document format. Please upload a PDF, DOC, DOCX, JPG, JPEG, or PNG document.";
+		}
+	
+		$targetDir = "../img/ID/";
+		$fileName = time() . "_" . basename($file['name']);
+		$targetFile = $targetDir . $fileName;
+	
+		// Ensure the target directory exists and is writable
+	
+		if (move_uploaded_file($file['tmp_name'], $targetFile)) {
+			return $fileName;  // Document was uploaded successfully
+		} else {
+			return "Error uploading document.";
+		}
+		
+		var_dump($file);  // This will show the details of the uploaded file
+
+	}
+	
+
+    // Optional: Send verification email (logic can be customized)
+    private function sendVerificationEmail($email) {
+        $verificationLink = "https://yourwebsite.com/verify.php?email=" . urlencode($email);
+        // Send an email with the verification link (use a mailing library like PHPMailer or mail())
+    }
 
 	function update_user(){
 		extract($_POST);

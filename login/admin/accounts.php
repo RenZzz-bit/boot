@@ -153,7 +153,23 @@ form button:hover {
                     </div>
                 </nav>
                 <!-- Page content-->
-                <p> hello</p>
+                <?php
+                  include 'db.php';
+
+                  // Fetch all unverified users
+                  $query = "SELECT id, firstname, lastname, email FROM users WHERE verified = 0";
+                  $result = $conn->query($query);
+
+                  while($row = $result->fetch_assoc()){
+                      echo "<div class='user'>
+                              <p>{$row['firstname']} {$row['lastname']} ({$row['email']})</p>
+                              <a href='admin_verify.php?id={$row['id']}'>Verify</a>
+                            </div>";
+                  }
+?>=
+
+
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
