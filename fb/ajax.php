@@ -6,10 +6,14 @@ $action = $_GET['action'];
 include 'admin_class.php';
 $crud = new Action();
 if ($action == 'login') {
-	$login = $crud->login();
-	if ($login)
-		echo $login;
+    $login = $crud->login();
+    if ($login !== null) {
+        echo $login;  // Return the response code (1, 2, 3, or 4)
+    } else {
+        echo 5;  // Optional: For unknown errors, you could return another error code
+    }
 }
+
 if ($action == 'login2') {
 	$login = $crud->login2();
 	if ($login)

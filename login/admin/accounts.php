@@ -112,6 +112,10 @@ form button:hover {
     padding: 12px 0;
   }
 }
+img {
+    max-width: 100px; /* Adjust as necessary */
+    height: auto;
+}
 
     </style>
     <body>
@@ -154,19 +158,102 @@ form button:hover {
                 </nav>
                 <!-- Page content-->
                 <?php
-                  include 'db.php';
+include 'db.php';
 
-                  // Fetch all unverified users
-                  $query = "SELECT id, firstname, lastname, email FROM users WHERE verified = 0";
-                  $result = $conn->query($query);
+// Fetch all unverified users
+$query = "SELECT id, firstname, lastname, gender, email, dob, document FROM users WHERE verified = 0";
+$result = $conn->query($query);
 
-                  while($row = $result->fetch_assoc()){
-                      echo "<div class='user'>
-                              <p>{$row['firstname']} {$row['lastname']} ({$row['email']})</p>
-                              <a href='admin_verify.php?id={$row['id']}'>Verify</a>
-                            </div>";
-                  }
-?>=
+echo "<style>
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+.verify-link, .reject-link {
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 3px;
+    display: inline-block;
+    text-decoration: none;
+}
+.verify-link {
+    background-color: #007bff;
+}
+.verify-link:hover {
+    background-color: #0056b3;
+}
+.reject-link {
+    background-color: #dc3545;
+}
+.reject-link:hover {
+    background-color: #c82333;
+}
+</style>";
+
+echo "<table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Gender</th>
+                <th>Email</th>
+                <th>Date of Birth</th>
+                <th>Document</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>";
+
+        while($row = $result->fetch_assoc()) {
+          $documentPath = $row['document'];  // Ensure this contains the correct path to the image
+          
+          // Check if the document path is valid (not null or empty)
+          if (!empty($documentPath)) {
+              echo "<tr>
+                      <td>{$row['firstname']}</td>
+                      <td>{$row['lastname']}</td>
+                      <td>{$row['gender']}</td>
+                      <td>{$row['email']}</td>
+                      <td>{$row['dob']}</td>
+                      <td><img src='../{$documentPath}' alt='Document Image' style='width:100px;height:auto;'></td>
+                      <td>
+                          <a class='verify-link' href='admin_verify.php?id={$row['id']}'>Verify</a>
+                          <a class='reject-link' href='admin_reject.php?id={$row['id']}'>Reject</a>
+                      </td>
+                    </tr>";
+          } else {
+              // Handle case where there is no image (optional)
+              echo "<tr>
+                      <td>{$row['firstname']}</td>
+                      <td>{$row['lastname']}</td>
+                      <td>{$row['gender']}</td>
+                      <td>{$row['email']}</td>
+                      <td>{$row['dob']}</td>
+                      <td>No image available</td>
+                      <td>
+                          <a class='verify-link' href='admin_verify.php?id={$row['id']}'>Verify</a>
+                          <a class='reject-link' href='admin_reject.php?id={$row['id']}'>Reject</a>
+                      </td>
+                    </tr>";
+          }
+      }
+      
+
+echo "</tbody></table>";
+?>
+
 
 
 

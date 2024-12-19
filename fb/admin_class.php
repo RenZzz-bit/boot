@@ -24,28 +24,27 @@ class Action
 		}
 	}
 
-	function login()
-	{
+	function login() {
 		// Check if form is submitted
 		if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			$email = $_POST['email'];
 			$password = $_POST['password'];
-
+	
 			// Sanitize inputs to avoid SQL injection
 			$email = $this->conn->real_escape_string($email);
 			$password = $this->conn->real_escape_string($password);
-
+	
 			// Query to get the user by email
 			$query = "SELECT * FROM users WHERE email = ?";
 			$stmt = $this->conn->prepare($query);
 			$stmt->bind_param("s", $email);
 			$stmt->execute();
 			$result = $stmt->get_result();
-
+	
 			// Check if the user exists
 			if ($result->num_rows > 0) {
 				$user = $result->fetch_assoc();
-
+	
 				// Check if user is verified
 				if ($user['verified'] == 1) {
 					// Verify the password
@@ -53,19 +52,20 @@ class Action
 						// Password matches and user is verified, log the user in
 						$_SESSION['user_id'] = $user['id'];
 						$_SESSION['user_email'] = $user['email'];
-
-						return "Login successful!";
+	
+						return 1;  // Success
 					} else {
-						return "Incorrect password.";
+						return 3;  // Incorrect password
 					}
 				} else {
-					return "Your account is not verified yet.";
+					return 2;  // Account not verified
 				}
 			} else {
-				return "No account found with that email.";
+				return 4;  // No account found with that email
 			}
 		}
 	}
+	
 
 	function logout()
 	{

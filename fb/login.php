@@ -246,7 +246,9 @@ header("location:index.php?page=home");
 	$('#new_account').click(function(){
 		uni_modal("<h4>Sign Up</h4><span><h6 class='text-muted'>It’s quick and easy.</h6></span>","signup.php")
 	})
-	/* $('#login-form').submit(function(e) { 
+  
+	
+  $('#login-form').submit(function(e) { 
     e.preventDefault();
     start_load();  // Start loading animation
 
@@ -262,28 +264,24 @@ header("location:index.php?page=home");
             end_load();  // End loading animation
         },
         success: function(resp) {
+            end_load();  // End loading animation
             if (resp == 1) {
-                location.href = 'index.php?page=additional_info.php';  // Redirect if login is successful
+                location.href = 'additional_info.php';  // Redirect if login is successful
             } else if (resp == 2) {
-                // Account not verified
                 $('#login-form').prepend('<div class="alert alert-danger">Your account is not verified. Please check your email.</div>');
-                end_load();
             } else if (resp == 3) {
-                // Incorrect password
                 $('#login-form').prepend('<div class="alert alert-danger">Incorrect password. Please try again.</div>');
-                end_load();
             } else if (resp == 4) {
-                // User not found
                 $('#login-form').prepend('<div class="alert alert-danger">Email not found. Please check your email.</div>');
-                end_load();
             } else {
-                // General error
                 $('#login-form').prepend('<div class="alert alert-danger">An error occurred. Please try again later.</div>');
-                end_load();
             }
         }
     });
-}) */
+});
+
+
+
 	$('.number').on('input keyup keypress',function(){
         var val = $(this).val()
         val = val.replace(/[^0-9 \,]/, '');

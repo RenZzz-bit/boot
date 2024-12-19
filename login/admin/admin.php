@@ -122,6 +122,7 @@ form button:hover {
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="admin.php">News Articles</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="accounts.php">User Accounts</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-3" href="ver.php">Verified Accounts</a>
                     <!-- <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Overview</a>
                      <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Events</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Profile</a>
