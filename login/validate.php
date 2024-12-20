@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		
 		if(($user['username'] == $username) && 
 			($user['password'] == $Password)) {
-				header("location: admin/admin.php");
+				header("location: admin/admin_dashboard.php");
 		}
 		else {
 			echo "<script language='javascript'>";
