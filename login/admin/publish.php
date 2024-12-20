@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
     if ($stmt->execute()) {
         echo "Article published successfully!";
-        header("Location: admin.php"); // Redirect to admin page after successful submission
+        header("Location: admin_dashboard.php"); // Redirect to admin page after successful submission
         exit();
     } else {
         echo "Error: " . $stmt->error;

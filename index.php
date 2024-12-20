@@ -127,8 +127,8 @@ include('login/admin/db.php');
                 <div class="collapse navbar-collapse" id="navbarCollapse" >
                     <div class="navbar-nav ms-auto">
                     <a href="index.php" class="nav-item nav-link active" style="color: #FF5733;">Home</a>
-                        <a href="about.php" class="nav-item nav-link" style="color: #FF5733;">About</a>
-                        <a href="hotline.php#container-fluid py-5" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
+                        <a href="about.php#about" class="nav-item nav-link" style="color: #FF5733;">About</a>
+                        <a href="hotline.php#hotlines" class="nav-item nav-link" style="color: #FF5733;">Hotlines</a>
                         <a href="index.php#news" class="nav-item nav-link" style="color: #FF5733;">News</a>
                         <a href="fb/login.php" class="nav-item nav-link" style="color: #FF5733;">Login</a>
                         <!-- <div class="nav-item dropdown">
@@ -194,8 +194,8 @@ include('login/admin/db.php');
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="btn btn-sm border rounded-pill px-3 mb-3" style="color: #FF5733;">About Kaagapay</div>
-                    <h1 class=" mb-4" style="color: #FF5733;">About kaagapay</h1>
+                    <!-- <div class="btn btn-sm border rounded-pill px-3 mb-3" style="color: #FF5733;">About Kaagapay</div> -->
+                    <h1 class=" mb-4" style="color: #FF5733;">About Kaagapay</h1>
                     <p class=" mb-4"style="color: #FF5733;">KAAGAPAY is a web-based platform designed to connect and support overseas Filipino workers (OFWs). It offers resources for legal aid, emergency assistance, and important news while enabling users to interact and share experiences. The platform fosters a 
                         safe and accessible environment where OFWs can connect, access vital information, and support each other.</p>
                     <!-- <a class="btn rounded-pill px-4" href="" style="bg-color: #FF5733;">Read More</a> -->
@@ -328,7 +328,7 @@ include('login/admin/db.php');
                             <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                                 data-bs-parent="#accordionFAQ1">
                                 <div class="accordion-body">
-                                KAAGAPAY is user-friendly and easy to navigate. Simply sign up, complete your profile, and start exploring the resources available for OFWs, including legal aid, emergency assistance, and community forums.
+                                KAAGAPAY is user-friendly and easy to navigate. Simply sign up, complete your profile, and start exploring the resources available for OFWs, emergency assistance, and community forums.
                                 </div>
                             </div>
                         </div>
